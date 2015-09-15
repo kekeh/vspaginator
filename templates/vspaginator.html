@@ -1,0 +1,3 @@
+<div class="vspaginator">
+    <button class="paginatorBtn" ng-style="{'margin-left':$index>0?'-1px':'0'}" ng-class="{'selectedPaginatorBtn':b.id===paginator.visiblePageIdx+1, 'disabledPaginatorBtn':isDisabledBtn(b), 'paginatorBtnNbr': !isNavigateBtn(b), 'paginatorBtnSet': b===btnPrevSet||b===btnNextSet, 'paginatorBtnAll': b===btnFirst||b===btnLast}" ng-click="paginatorBtnClick(b,$index)" ng-repeat="b in paginatorButtons track by $index">{{b.label}}</button>
+</div>

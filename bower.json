@@ -1,0 +1,37 @@
+{
+  "name": "vspaginator",
+  "description": "Paginator - AngularJS reusable UI component",
+  "version": "0.1.7",
+  "homepage": "http://kekeh.github.io/vspaginator",
+  "license": "MIT",
+  "authors": [
+    "kekeh"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kekeh/vspaginator.git"
+  },
+  "main": [
+    "dist/min/vspaginator-0.0.1.min.css",
+    "dist/min/vspaginator-0.0.1.min.js"
+  ],
+  "keywords": [
+    "AngularJS",
+    "vspaginator",
+    "paginator"
+  ],
+  "ignore": [
+    "**/.*",
+    "Gruntfile.js",
+    "karma.conf.js",
+    "node_modules",
+    "bower_components",
+    "css",
+    "js",
+    "templates",
+    "test"
+  ],
+  "dependencies": {
+    "angular": "1.4.x"
+  }
+}
