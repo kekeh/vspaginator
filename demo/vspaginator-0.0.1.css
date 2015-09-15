@@ -1,0 +1,59 @@
+.vspaginator {
+
+}
+
+.vspaginator button, .vspaginator div {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.vspaginator .paginatorBtn {
+    background: #FAFAFA;
+    background-image: -webkit-linear-gradient(#F0F0F0 30%, #AEC2E1 100%);
+    background-image: -moz-linear-gradient(#F0F0F0 30%, #AEC2E1 100%);
+    background-image: -o-linear-gradient(#F0F0F0 30%, #AEC2E1 100%);
+    background-image: -ms-linear-gradient(#F0F0F0 30%, #AEC2E1 100%);
+    background-image: linear-gradient(#F0F0F0 30%, #AEC2E1 100%);
+}
+
+.vspaginator .paginatorBtn {
+    min-height: 30px;
+    min-width: 36px;
+    padding: 0 3px;
+    font-size: 12px;
+    border: 1px solid #988E8E;
+    color: #000;
+}
+
+.vspaginator .paginatorBtn:enabled {
+    cursor: pointer;
+}
+
+.vspaginator .paginatorBtn:hover:enabled {
+    background: #CAFFCA;
+}
+
+.vspaginator .paginatorBtn:focus:enabled {
+    outline: #CCC dotted 1px;
+    outline-offset: -2px;
+    color: #1589FF;
+}
+
+.vspaginator .selectedPaginatorBtn {
+    color: #1589FF;
+    background: #CFECEC;
+    font-weight: bold;
+}
+
+.vspaginator .disabledPaginatorBtn {
+    pointer-events: none;
+    color: #BBB;
+}
+
+.vspaginator button::-moz-focus-inner {
+    border: 0;
+}
