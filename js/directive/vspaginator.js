@@ -44,7 +44,7 @@ _vspg.directive('vspaginator', ['vspgConf', 'vspgServ', function (vspgConf, vspg
             };
 
             scope.$watch('opt.totalPages', function () {
-                reset();
+                setPaginatorValues(0, 0);
             });
 
             scope.$watch('opt.activePage', function (val) {
@@ -108,7 +108,7 @@ _vspg.directive('vspaginator', ['vspgConf', 'vspgServ', function (vspgConf, vspg
                 var oldPage = scope.paginator.visiblePageIdx + 1;
                 scope.paginator = {visiblePageIdx: visiblePageIdx, pageFirstIdx: pageFirstIdx};
                 setPaginatorButtons();
-                if (!vspgServ.isUndefined(scope.opt.pageChangedCb) && !vspgServ.isEqual(oldPage, visiblePageIdx + 1)) {
+                if (!vspgServ.isUndefined(scope.opt.pageChangedCb)) {
                     scope.opt.pageChangedCb(oldPage, visiblePageIdx + 1);
                 }
             }
@@ -173,10 +173,6 @@ _vspg.directive('vspaginator', ['vspgConf', 'vspgServ', function (vspgConf, vspg
                 }
             }
 
-            function reset() {
-                setPaginatorValues(0, 0);
-            }
-
             function init() {
                 // Check defaults
                 visibleBtnCount = vspgServ.isUndefined(scope.opt.visibleBtnCount) ? scope.cf.visibleBtnCount : scope.opt.visibleBtnCount;
@@ -191,7 +187,6 @@ _vspg.directive('vspaginator', ['vspgConf', 'vspgServ', function (vspgConf, vspg
                 scope.btnLast = {id: 'l', label: firstLastBtn.labels[1]};
                 scope.btnPrevSet = {id: 'ps', label: prevNextSetBtn.labels[0]};
                 scope.btnNextSet = {id: 'ns', label: prevNextSetBtn.labels[1]};
-                reset();
             }
 
             init();
